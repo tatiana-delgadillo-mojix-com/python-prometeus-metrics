@@ -20,6 +20,7 @@ def test():
 @app.route('/test1/')
 def test1():
     try:
+        logging.debug('This message should go to the log file')
         1/0
         return 'rest', 200
     except:
